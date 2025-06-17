@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import { ScrollView, Modal, TouchableOpacity } from "react-native";
-import { Box, Image, Text } from "@/components/Restyle";
-import Pressable from "@/components/Restyle/Pressable";
-import Icon from "@/assets/icons/Icon";
-import theme from "@/constants/Colors";
+
 import {
   aboutSections,
   revenueStreams,
@@ -12,6 +9,8 @@ import {
   trustedBy,
 } from "@/constants/mockData";
 import TermsModal from "@/components/TermsModal";
+import { Box, Image, Pressable, Text } from "./Restyle";
+import Icon from "@/assets/icons/Icon";
 
 const AboutPage = () => {
   const [showTerms, setShowTerms] = useState(false);
@@ -113,7 +112,7 @@ const AboutPage = () => {
             </Text>
           </Box>
 
-          
+
           {aboutSections.map((section) => (
             <Box
               key={section.title}
