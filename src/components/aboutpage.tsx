@@ -1,16 +1,9 @@
 import React, { useState } from "react";
-import { ScrollView, Modal, TouchableOpacity } from "react-native";
-
-import {
-  aboutSections,
-  revenueStreams,
-  teamMembers,
-  termsText,
-  trustedBy,
-} from "@/constants/mockData";
-import TermsModal from "@/components/TermsModal";
+import { ScrollView} from "react-native";
 import { Box, Image, Pressable, Text } from "./Restyle";
-import Icon from "@/assets/icons/Icon";
+import Icon from "../assets/icons/Icon";
+import { aboutSections, revenueStreams, teamMembers, termsText, trustedBy } from "../constants/mockData";
+import TermsModal from "../components/TermsModal";
 
 const AboutPage = () => {
   const [showTerms, setShowTerms] = useState(false);
@@ -18,25 +11,7 @@ const AboutPage = () => {
   return (
     <Box height="100%" backgroundColor="white">
 
-      {/* <Box
-        flexDirection="row"
-        alignItems="center"
-        px="md"
-        py="sm"
-        bg="white"
-        borderBottomWidth={0.5}
-        borderColor="greyBorder"
-      >
-        <Pressable>
-          <Icon name="arrowLeft" size={24} color="primary" />
-        </Pressable>
-        <Box flex={1} alignItems="center">
-          <Text variant="header" color="primary">
-            About Us
-          </Text>
-        </Box>
-        <Box width={24} />
-      </Box> */}
+
 
       <ScrollView showsVerticalScrollIndicator={false}>
         <Box
@@ -71,7 +46,7 @@ const AboutPage = () => {
               resizeMode="contain"
             /> */}
             <Image
-              source={require("@/assets/images/adaptive-icon.png")}
+              source={require("../assets/images/adaptive-icon.png")}
               width={80}
               height={80}
               borderRadius={20}

@@ -13,6 +13,7 @@ module.exports = function (api) {
             "@/constants": "./src/constants",
             "@/assets": "./src/assets",
           },
+          extensions: [".ios.js", ".android.js", ".js", ".ts", ".tsx", ".json"],
         },
       ],
     ],
